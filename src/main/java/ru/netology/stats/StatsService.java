@@ -13,16 +13,9 @@ public class StatsService {
     }
 
     public int averageSumMonth(int[] stats) {
-
-        int average = 0;
-        if (stats.length > 0) {
-            int sum = 0;
-            for (int a = 0; a < stats.length; a++) {
-                sum += stats[a];
-            }
-            average = sum / stats.length;
-        }
-        return average;
+        int sum = sumTotalSales(stats);
+        int result = sum / stats.length;
+        return result;
     }
 
     public int minSales(int[] sales) {
